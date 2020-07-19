@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
                   child:TrackHeader()
               ),
               Container(
-                  child:Text("place holder")
+                  child:Text("place holder2")
               )
             ]
         )
