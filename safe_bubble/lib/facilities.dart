@@ -1,3 +1,4 @@
+import 'package:safe_bubble/NavigationBar.dart';
 import 'package:flutter/material.dart';
 
 class Facilities extends StatefulWidget {
@@ -63,7 +64,7 @@ class _FacilitiesState extends State<Facilities> {
                 flex: 1),
           ),
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Column(
               children: <Widget>[
                 Container(
@@ -76,7 +77,8 @@ class _FacilitiesState extends State<Facilities> {
                   ),
                 ),
                 Container(
-                    padding: EdgeInsets.fromLTRB(50, 5, 50, 5),
+                    margin: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                    padding: EdgeInsets.fromLTRB(20, 5, 0, 5),
                     decoration: new BoxDecoration(
                       //背景
                       color: Color(0xffb9d5ff),
@@ -89,34 +91,313 @@ class _FacilitiesState extends State<Facilities> {
                       ),
                       //设置四周边框
                     ),
-                    child: Text(
-                        'If you are using ios13 or higher, you can\njust put your phone near the tag'))
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+
+                          child: Text(
+                              'If you are using ios13 or higher, you can\njust put your phone near the tag'),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(20,0,0,0),
+
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                            ),
+                            onPressed: (){},
+                            color: Colors.orange,
+                            child: Container(child: Text('   Scan\nQR code'))
+                          ),
+                        ),
+                      ],
+                    ))
               ],
             ),
           ),
           Expanded(
             flex: 2,
-            child: Container(
-              padding: EdgeInsets.all(30.0),
-              color: Color(0xffb9d5ff),
-              child: Text('2'),
+            child:Column(
+              children: <Widget>[
+                Container(
+
+                  padding: EdgeInsets.fromLTRB(0, 0, 360, 10),
+                  child: Text(
+                    'Gyms',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Container(
+                    margin: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                    padding: EdgeInsets.fromLTRB(20, 5, 0, 5),
+                    decoration: new BoxDecoration(
+                      //背景
+                      color: Color(0xffb9d5ff),
+                      //设置四周圆角 角度
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(25.0),
+                        topRight: Radius.circular(25.0),
+                        bottomLeft: Radius.circular(25.0),
+                        bottomRight: Radius.circular(25.0),
+                      ),
+                      //设置四周边框
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+
+                          child: Text(
+                              'If you are using ios13 or higher, you can\njust put your phone near the tag'),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(20,0,0,0),
+
+                          child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                              ),
+                              onPressed: (){},
+                              color: Colors.orange,
+                              child: Container(child: Text('   Scan\nQR code'))
+                          ),
+                        ),
+                      ],
+                    ))
+              ],
             ),
           ),
           Expanded(
-            flex: 2,
-            child: Container(
-              padding: EdgeInsets.all(30.0),
-              color: Colors.amber,
-              child: Text('3'),
+            flex: 5,
+            child: Column(
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.fromLTRB(10, 0, 300, 5),
+                  child: Text(
+                    'Scientific Fact',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+
+                Container(
+                  margin: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                  height: 200,
+                  width: 1000,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      Container(
+                          margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          padding: EdgeInsets.fromLTRB(15, 5, 15, 5),
+                          decoration: new BoxDecoration(
+                            //背景
+                            color: Color(0xffb9d5ff),
+                            //设置四周圆角 角度
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(25.0),
+                              topRight: Radius.circular(25.0),
+                              bottomLeft: Radius.circular(25.0),
+                              bottomRight: Radius.circular(25.0),
+                            ),
+                            //设置四周边框
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+
+                              Text('Symtoms of Covid-19'),
+                              SizedBox(
+                                height: 10,
+                                width: 10,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  Column(
+                                    children: <Widget>[
+                                      Icon(Icons.account_circle),
+                                      Text('cough or fever')
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                    width: 10,
+                                  ),
+                                  Column(
+                                  children: <Widget>[
+                                      Icon(Icons.account_circle),
+                                      Text('cough or fever'),
+                                  ],
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                    width: 10,
+                                  ),
+                                  Column(
+                                    children: <Widget>[
+                                      Icon(Icons.account_circle),
+                                      Text('cough or fever'),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              ],
+                          ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                        width: 10,
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        padding: EdgeInsets.fromLTRB(15, 5, 15, 5),
+                        decoration: new BoxDecoration(
+                          //背景
+                          color: Color(0xffb9d5ff),
+                          //设置四周圆角 角度
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(25.0),
+                            topRight: Radius.circular(25.0),
+                            bottomLeft: Radius.circular(25.0),
+                            bottomRight: Radius.circular(25.0),
+                          ),
+                          //设置四周边框
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+
+                            Text('Symtoms of Covid-19'),
+                            SizedBox(
+                              height: 10,
+                              width: 10,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                Column(
+                                  children: <Widget>[
+                                    Icon(Icons.account_circle),
+                                    Text('cough or fever')
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                  width: 10,
+                                ),
+                                Column(
+                                  children: <Widget>[
+                                    Icon(Icons.account_circle),
+                                    Text('cough or fever'),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                  width: 10,
+                                ),
+                                Column(
+                                  children: <Widget>[
+                                    Icon(Icons.account_circle),
+                                    Text('cough or fever'),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                        width: 10,
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        padding: EdgeInsets.fromLTRB(15, 5, 15, 5),
+                        decoration: new BoxDecoration(
+                          //背景
+                          color: Color(0xffb9d5ff),
+                          //设置四周圆角 角度
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(25.0),
+                            topRight: Radius.circular(25.0),
+                            bottomLeft: Radius.circular(25.0),
+                            bottomRight: Radius.circular(25.0),
+                          ),
+                          //设置四周边框
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+
+                            Text('Symtoms of Covid-19'),
+                            SizedBox(
+                              height: 10,
+                              width: 10,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                Column(
+                                  children: <Widget>[
+                                    Icon(Icons.account_circle),
+                                    Text('cough or fever')
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                  width: 10,
+                                ),
+                                Column(
+                                  children: <Widget>[
+                                    Icon(Icons.account_circle),
+                                    Text('cough or fever'),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                  width: 10,
+                                ),
+                                Column(
+                                  children: <Widget>[
+                                    Icon(Icons.account_circle),
+                                    Text('cough or fever'),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                     ],
+                  ),
+                ),
+    ],
             ),
           ),
-        ],
+
+          Expanded(
+            flex: 1,
+            child:SizedBox(),
+          ),
+
+          Expanded(
+            flex:2,
+            child: NavigationBar(),
+          ),
+          ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Text('click'),
-        backgroundColor: Colors.cyanAccent[400],
-      ),
-    );
+          );
+
+
   }
 }
+
+
